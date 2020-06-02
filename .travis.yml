@@ -15,12 +15,13 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-reverse-proxy .
+
+  - docker build -t udagram-reverse-proxy .
   # - docker tag simple-reverse-proxy DOCKER_HUB_ACCOUNT/simple-reverse-proxy:latest
-  - docker tag simple-reverse-proxy arunchacko/udacity-cd-nd:simple-reverse-proxy
+  - docker tag udagram-reverse-proxy arunchacko/ud-repo-jun1:udagram-reverse-proxy
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # - docker push DOCKER_HUB_ACCOUNT/simple-reverse-proxy
-  - docker push arunchacko/udacity-cd-nd:simple-reverse-proxy
+  - docker push arunchacko/ud-repo-jun1:udagram-reverse-proxy
 
