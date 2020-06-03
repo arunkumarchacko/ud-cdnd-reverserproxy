@@ -1,0 +1,6 @@
+NAME                            READY   STATUS    RESTARTS   AGE
+feedapi-56b7bc57b9-znm67        1/1     Running   0          81s
+reverseproxy-7dcb84dc9d-jwkkh   1/1     Running   0          61s
+udfrontend-77d6d45f76-zs2n9     1/1     Running   0          71s
+usersapi-545548dcf9-4jbq9       1/1     Running   0          91s
+usersapi-545548dcf9-8xcww       1/1     Running   0          91s

@@ -1,0 +1,69 @@
+Name:              feedapi
+Namespace:         default
+Labels:            run=feedapi
+Annotations:       <none>
+Selector:          app=feedapi
+Type:              ClusterIP
+IP:                10.100.175.246
+Port:              <unset>  9090/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.44.62:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         172.31.26.199:443,172.31.45.213:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              reverseproxy-svc
+Namespace:         default
+Labels:            service=reverseproxy
+Annotations:       <none>
+Selector:          service=reverseproxy
+Type:              ClusterIP
+IP:                10.100.113.20
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.36.75:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udfrontend
+Namespace:         default
+Labels:            run=udfrontend
+Annotations:       <none>
+Selector:          app=udfrontend
+Type:              ClusterIP
+IP:                10.100.40.179
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.33.189:8080
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              usersapi
+Namespace:         default
+Labels:            run=usersapi
+Annotations:       <none>
+Selector:          app=usersapi
+Type:              ClusterIP
+IP:                10.100.101.52
+Port:              <unset>  9090/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.1.239:8080,172.31.33.52:8080
+Session Affinity:  None
+Events:            <none>
